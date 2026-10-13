@@ -17,8 +17,8 @@ Service copy, scope lists and images are in `src/data/services.ts`.
 
 ## Items to confirm with the business
 
-- **Email domain.** The supplied address is `shravankushwaha65@gamil.com`. "gamil" may be a typo of "gmail". It is kept exactly as supplied until the business confirms it.
-- **WhatsApp.** The enquiry buttons use 98152-62757 (`919815262757`). WhatsApp availability on this number is not confirmed. Change `whatsappNumber` if needed.
+- **Email.** The primary email is `director@skfireprotection.online`, used for every mailto link and the enquiry fallback. The originally supplied `shravankushwaha65@gamil.com` is kept as `secondaryEmail` and shown only in the Contact section ("gamil" may be a typo of "gmail").
+- **WhatsApp.** Every WhatsApp button and the enquiry form send to 96463-96707 (`919646396707`). Calls still go to 98152-62757.
 - **Logo.** No logo file was supplied, so a temporary "SK FIRE PROTECTION" wordmark is used (`src/components/ui/Logo.tsx`). Put the real logo in `src/assets/logo/`, import it in `business.ts` and set `logoSrc`. Also replace `public/favicon.svg`.
 - **Domain.** Set `siteUrl` once the live domain is known (enables canonical and Open Graph URLs).
 - **Company profile facts.** The 10+ years of field work, 12+ completed projects, 2023 main-contractor registration, GSTIN, owner roles and phone numbers, electrical contracting scope and the 4-step project process come from the company profile PDF. The profile's "100% code compliance" claim was left out on purpose: the site does not make compliance guarantees.

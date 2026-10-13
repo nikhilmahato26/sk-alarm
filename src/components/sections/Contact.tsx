@@ -3,9 +3,11 @@ import { ExternalLink, FileText, Mail, MapPin, Phone, UserRound } from 'lucide-r
 
 import { business } from '../../config/business'
 import { mailtoHref, mapsEmbedUrl, mapsSearchUrl } from '../../utils/contact'
+import { whatsappUrl } from '../../utils/whatsapp'
 import { ButtonLink } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeading } from '../ui/SectionHeading'
+import { WhatsAppIcon } from '../ui/WhatsAppButton'
 
 const row = 'flex gap-4 py-5'
 const iconWrap = 'inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-fire-50 text-fire-600'
@@ -43,6 +45,33 @@ export function Contact() {
                   <dd>
                     <a href={mailtoHref()} className="font-semibold break-all text-ink hover:text-brand-700">
                       {business.email}
+                    </a>
+                  </dd>
+                  <dd className="mt-1">
+                    <a
+                      href={`mailto:${business.secondaryEmail}`}
+                      className="text-[15px] break-all text-muted hover:text-brand-700"
+                    >
+                      {business.secondaryEmail}
+                    </a>
+                  </dd>
+                </div>
+              </div>
+              <div className={row}>
+                <span className={iconWrap}>
+                  <WhatsAppIcon className="size-5" />
+                </span>
+                <div>
+                  <dt className="text-sm text-muted">WhatsApp enquiries</dt>
+                  <dd>
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-display text-lg font-bold text-ink hover:text-brand-700"
+                    >
+                      {business.whatsappDisplay}
+                      <span className="sr-only"> (opens WhatsApp in a new tab)</span>
                     </a>
                   </dd>
                 </div>

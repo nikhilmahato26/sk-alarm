@@ -23,18 +23,20 @@ export const business = {
   phoneUri: 'tel:+919815262757',
 
   /**
-   * WhatsApp number (country code + number, digits only).
-   * The supplied phone number is used here, but WhatsApp availability on it
-   * has not been confirmed. Replace if the business gives a separate number.
+   * WhatsApp number that receives every enquiry (country code + number, digits only).
+   * All WhatsApp buttons and the enquiry form send to this number.
    */
-  whatsappNumber: '919815262757',
+  whatsappNumber: '919646396707',
+  whatsappDisplay: '96463-96707',
+
+  /** Primary email, used for every mailto link, the enquiry fallback and structured data. */
+  email: 'director@skfireprotection.online',
 
   /**
-   * Email preserved exactly as supplied by the business.
+   * Secondary email preserved exactly as originally supplied.
    * NOTE: the domain reads "gamil.com", which may be a typo of "gmail.com".
-   * Do not change it until the business confirms the correct address.
    */
-  email: 'shravankushwaha65@gamil.com',
+  secondaryEmail: 'shravankushwaha65@gamil.com',
 
   address: {
     street: 'St. No. 8, Near Universal Convent International School, Captain Nagar, Lohara',
