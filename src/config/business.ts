@@ -6,6 +6,7 @@
  */
 
 import prabhdeepPhoto from '../assets/team/prabhdeep-singh.webp'
+import shravanPhoto from '../assets/team/shravan-kumar.webp'
 
 export type Person = {
   name: string
@@ -69,6 +70,7 @@ export const business = {
       focus: 'Electrical design standards, sprinkler work and testing.',
       phoneDisplay: '98152-62757',
       phoneE164: '+919815262757',
+      photo: shravanPhoto,
     },
     {
       name: 'Prabhdeep Singh',
