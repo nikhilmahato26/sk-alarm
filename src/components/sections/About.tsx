@@ -36,7 +36,7 @@ export function About() {
           <SectionHeading id="about-title" title="Your fire protection service partner" />
           <div className="mt-6 max-w-[62ch] space-y-4 text-base leading-relaxed text-ink-soft md:text-lg">
             <p>
-              SK Fire Protection provides fire protection system services in Ludhiana, Punjab. Our listed services
+              SK Fire Protection is based in Ludhiana, Punjab, and provides fire protection system services across India. Our listed services
               include fire hydrant systems, fire sprinkler systems, fire alarm systems, and fire maintenance services.
             </p>
             <p>

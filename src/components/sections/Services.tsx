@@ -16,7 +16,7 @@ export function Services() {
           id="services-title"
           eyebrow="Fire protection systems & maintenance"
           title="Our fire protection services"
-          intro="Four service categories for properties and projects. Choose a service to enquire, or read more about it below."
+          intro="Four service categories for properties and projects across India. Choose a service to enquire, or read more about it below."
         />
 
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

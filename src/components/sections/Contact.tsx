@@ -73,9 +73,20 @@ export function Contact() {
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               {business.people.map((p, i) => (
                 <Reveal as="li" key={p.name} delay={i * 0.06} className="rounded-2xl border border-line p-5">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
-                    <UserRound className="size-5" aria-hidden="true" />
-                  </span>
+                  {p.photo ? (
+                    <img
+                      src={p.photo}
+                      alt={`Portrait of ${p.name}`}
+                      width={480}
+                      height={480}
+                      loading="lazy"
+                      className="size-16 rounded-full bg-mist object-cover object-top ring-2 ring-line"
+                    />
+                  ) : (
+                    <span className="inline-flex size-16 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                      <UserRound className="size-7" aria-hidden="true" />
+                    </span>
+                  )}
                   <p className="mt-3 font-display font-bold text-ink">{p.name}</p>
                   <p className="text-sm font-medium text-fire-600">{p.role}</p>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{p.focus}</p>

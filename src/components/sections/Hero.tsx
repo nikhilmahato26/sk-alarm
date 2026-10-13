@@ -66,7 +66,7 @@ export function Hero() {
               <span className="w-3/5 bg-fire-600" />
               <span className="w-2/5 bg-brand-500" />
             </span>
-            SK Fire Protection · Ludhiana, Punjab
+            SK Fire Protection · Service across India
           </motion.p>
 
           <motion.h1
@@ -78,8 +78,8 @@ export function Hero() {
           </motion.h1>
 
           <motion.p {...rise(0.16)} className="mt-6 max-w-[46ch] text-lg leading-relaxed text-white/80">
-            Fire hydrant, sprinkler and alarm systems, plus fire maintenance services, from SK Fire Protection in
-            Ludhiana, Punjab.
+            Fire hydrant, sprinkler and alarm systems, plus maintenance services. Based in Ludhiana, serving
+            clients across India.
           </motion.p>
 
           <motion.div {...rise(0.24)} className="mt-9 flex flex-col gap-3 sm:flex-row">

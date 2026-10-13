@@ -21,7 +21,10 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-muted">
-            Fire hydrant, sprinkler and alarm systems, plus maintenance services, in {business.locationShort}.
+            Fire hydrant, sprinkler and alarm systems, plus maintenance services, for projects across India.
+          </p>
+          <p className="mt-3 text-[15px] leading-relaxed text-muted">
+            <span className="font-semibold text-ink">Pan-India service.</span> Head office in {business.locationShort}.
           </p>
           <p className="mt-4 text-xs text-muted">
             GSTIN <span className="font-semibold tracking-wide text-ink">{business.gstin}</span>
@@ -96,7 +99,7 @@ export function Footer() {
       <div className="border-t border-line">
         <div className="container-page flex flex-col gap-2 py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 {business.name}. All rights reserved.</p>
-          <p>Photographs are illustrative and do not show SK Fire Protection projects.</p>
+          <p>Photos in Our Work are from SK Fire Protection sites. Other photographs are illustrative.</p>
         </div>
       </div>
     </footer>

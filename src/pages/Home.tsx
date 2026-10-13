@@ -8,13 +8,14 @@ import { ContactBar } from '../components/sections/ContactBar'
 import { EnquiryForm } from '../components/sections/EnquiryForm'
 import { FireSafetyAwareness } from '../components/sections/FireSafetyAwareness'
 import { Hero } from '../components/sections/Hero'
+import { OurWork } from '../components/sections/OurWork'
 import { ServiceDetails } from '../components/sections/ServiceDetails'
 import { Services } from '../components/sections/Services'
 import { WhyChoose } from '../components/sections/WhyChoose'
 
 const title = 'SK Fire Protection | Fire Hydrant, Sprinkler & Alarm Systems in Ludhiana'
 const description =
-  'SK Fire Protection in Ludhiana, Punjab provides fire hydrant system, fire sprinkler system, fire alarm system, and fire maintenance service enquiries.'
+  'SK Fire Protection, based in Ludhiana, Punjab, provides fire hydrant, fire sprinkler, fire alarm and fire maintenance services for projects across India.'
 
 // LocalBusiness data built only from supplied details: no ratings, reviews, hours or coordinates.
 const structuredData = {
@@ -41,7 +42,7 @@ const structuredData = {
     addressRegion: business.address.region,
     addressCountry: business.address.countryCode,
   },
-  areaServed: { '@type': 'City', name: 'Ludhiana' },
+  areaServed: { '@type': 'Country', name: 'India' },
   founder: business.people.map((p) => ({ '@type': 'Person', name: p.name, jobTitle: p.role })),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -73,6 +74,7 @@ export default function Home() {
       <About />
       <Services />
       <ServiceDetails />
+      <OurWork />
       <WhyChoose />
       <FireSafetyAwareness />
       <EnquiryForm />

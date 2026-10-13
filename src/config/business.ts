@@ -5,12 +5,16 @@
  * (not individual components) when the business confirms a change.
  */
 
+import prabhdeepPhoto from '../assets/team/prabhdeep-singh.webp'
+
 export type Person = {
   name: string
   role: string
   focus: string
   phoneDisplay: string
   phoneE164: string
+  /** Optional portrait, imported from src/assets/team. */
+  photo?: string
 }
 
 export const business = {
@@ -48,6 +52,8 @@ export const business = {
     'St. No. 8, Near Universal Convent International School, Captain Nagar, Lohara, Ludhiana - 141016, Punjab, India.',
   locationShort: 'Ludhiana, Punjab',
   location: 'Ludhiana, Punjab, India',
+  /** Where the business takes on work. */
+  serviceArea: 'Across India',
 
   /** From the SK Fire Protection company profile. */
   gstin: '03BFMPK5275F1ZF',
@@ -70,8 +76,9 @@ export const business = {
       focus: 'Site deployment, workforce management and client coordination.',
       phoneDisplay: '96463-96707',
       phoneE164: '+919646396707',
+      photo: prabhdeepPhoto,
     },
-  ] satisfies Person[],
+  ] as Person[],
 
   services: [
     'Fire Hydrant System',

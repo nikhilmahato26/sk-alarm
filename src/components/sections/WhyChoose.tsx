@@ -24,8 +24,8 @@ const points: { icon: LucideIcon; title: string; body: string }[] = [
   },
   {
     icon: MapPin,
-    title: 'Local contact',
-    body: `Contact the business in ${business.locationShort}.`,
+    title: 'Service across India',
+    body: `Based in ${business.locationShort}, taking on projects across India.`,
   },
   {
     icon: PhoneCall,

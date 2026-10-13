@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { Mail, MapPin, Phone, ShieldCheck } from 'lucide-react'
+import { Globe, Mail, MapPin, Phone } from 'lucide-react'
 
 import { business } from '../../config/business'
 
@@ -14,7 +14,7 @@ const items: Item[] = [
     extra: { value: business.phone2Display, href: business.phone2Uri },
   },
   { icon: MapPin, label: 'Location', value: business.locationShort },
-  { icon: ShieldCheck, label: 'Services', value: 'Fire Protection Systems' },
+  { icon: Globe, label: 'Service area', value: business.serviceArea },
   { icon: Mail, label: 'Email', value: business.email, href: `mailto:${business.email}` },
 ]
 

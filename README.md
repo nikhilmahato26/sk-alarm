@@ -27,9 +27,17 @@ Service copy, scope lists and images are in `src/data/services.ts`.
 
 There is no backend. The enquiry form validates input, builds a WhatsApp message and opens `wa.me` in a new tab. Nothing is stored. The confirmation screen also offers email (with the message pre-filled) and phone as fallbacks.
 
+## Our Work gallery
+
+The "Our work on site" section shows real SK Fire Protection site photos. Originals are in `src/assets/site/` (WhatsApp exports). Optimised copies live in `src/assets/work/` as `work-NN.webp` (full size, used in the photo viewer) and `work-NN-thumb.webp` (grid). Alt text and filter category for each photo are in `src/data/work.ts`. To add a photo, export both sizes with the next number and add a line to that file.
+
+## Owner photos
+
+Each owner in `business.ts` accepts an optional `photo`. Put the portrait in `src/assets/team/`, import it in `business.ts` and set `photo` on that person; the Contact section then shows it instead of the placeholder icon.
+
 ## Images
 
-All photographs are CC0 (public domain dedication) from the WordPress Photo Directory and Wikimedia Commons. They are generic illustrations, not SK Fire Protection projects, and the footer says so.
+Apart from the Our Work gallery, the photographs are CC0 (public domain dedication) from the WordPress Photo Directory and Wikimedia Commons. They are generic illustrations, not SK Fire Protection projects, and the footer says so.
 
 | File | Source |
 | --- | --- |
