@@ -17,7 +17,7 @@ Service copy, scope lists and images are in `src/data/services.ts`.
 
 ## Items to confirm with the business
 
-- **Email.** The primary email is `director@skfireprotection.online`, used for every mailto link and the enquiry fallback. The originally supplied `shravankushwaha65@gamil.com` is kept as `secondaryEmail` and shown only in the Contact section ("gamil" may be a typo of "gmail").
+- **Email.** `director@skfireprotection.online` is the only email shown, used for every mailto link and the enquiry fallback.
 - **WhatsApp.** Every WhatsApp button and the enquiry form send to 96463-96707 (`919646396707`). Calls still go to 98152-62757.
 - **Logo.** No logo file was supplied, so a temporary "SK FIRE PROTECTION" wordmark is used (`src/components/ui/Logo.tsx`). Put the real logo in `src/assets/logo/`, import it in `business.ts` and set `logoSrc`. Also replace `public/favicon.svg`.
 - **Domain.** Set `siteUrl` once the live domain is known (enables canonical and Open Graph URLs).

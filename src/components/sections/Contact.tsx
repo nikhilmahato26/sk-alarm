@@ -47,14 +47,6 @@ export function Contact() {
                       {business.email}
                     </a>
                   </dd>
-                  <dd className="mt-1">
-                    <a
-                      href={`mailto:${business.secondaryEmail}`}
-                      className="text-[15px] break-all text-muted hover:text-brand-700"
-                    >
-                      {business.secondaryEmail}
-                    </a>
-                  </dd>
                 </div>
               </div>
               <div className={row}>

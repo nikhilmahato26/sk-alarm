@@ -36,12 +36,6 @@ export const business = {
   /** Primary email, used for every mailto link, the enquiry fallback and structured data. */
   email: 'director@skfireprotection.online',
 
-  /**
-   * Secondary email preserved exactly as originally supplied.
-   * NOTE: the domain reads "gamil.com", which may be a typo of "gmail.com".
-   */
-  secondaryEmail: 'shravankushwaha65@gamil.com',
-
   address: {
     street: 'St. No. 8, Near Universal Convent International School, Captain Nagar, Lohara',
     city: 'Ludhiana',
