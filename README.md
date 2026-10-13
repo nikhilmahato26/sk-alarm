@@ -33,7 +33,7 @@ All photographs are CC0 (public domain dedication) from the WordPress Photo Dire
 
 | File | Source |
 | --- | --- |
-| hero-hydrant-valves.webp | https://pd.w.org/2024/11/854672f125ca2c6a8.19630609-2048x1542.jpg (cropped) |
+| hero-hydrant-portrait.webp | https://pd.w.org/2024/11/854672f125ca2c6a8.19630609-2048x1542.jpg (cropped) |
 | hydrant-hose-reel.webp | https://pd.w.org/2025/08/20368a2e0ad345295.04009273-1536x2048.jpg |
 | hydrant-hose-cabinet.webp | https://pd.w.org/2025/09/66168ba9c1387e091.04072572-1536x2048.jpeg |
 | sprinkler-head.webp | https://commons.wikimedia.org/wiki/File:Fusable_link_sprinkler_head.jpg |
