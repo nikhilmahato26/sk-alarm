@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+/*
+ * Brand tokens approximated from the SK Fire Protection logo (blue "SK", red/blue swoosh).
+ * brand-600 is the darker blue used behind white text so buttons pass WCAG AA (5.6:1);
+ * brand-500 is the logo blue, used for icons, accents and large type only.
+ *
+ * Radius rule: buttons and inputs rounded-lg (10px), cards and media rounded-2xl (16px).
+ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Manrope Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eef7fc;
+  --color-brand-100: #d6ecf8;
+  --color-brand-500: #1686c9;
+  --color-brand-600: #0f6ca6;
+  --color-brand-700: #0b5a8c;
+  --color-brand-900: #0a2e47;
+
+  --color-fire-50: #fdf1f0;
+  --color-fire-100: #fadcd9;
+  --color-fire-600: #d52b1e;
+  --color-fire-700: #b32218;
+
+  --color-ink: #171717;
+  --color-ink-soft: #3d4650;
+  --color-muted: #55606b;
+  --color-mist: #f4f6f8;
+  --color-line: #e1e5e9;
+
+  --radius-lg: 10px;
+  --radius-2xl: 16px;
+
+  --shadow-card: 0 1px 2px rgb(10 46 71 / 0.06), 0 8px 24px -12px rgb(10 46 71 / 0.18);
+  --shadow-nav: 0 1px 0 rgb(10 46 71 / 0.06), 0 6px 20px -10px rgb(10 46 71 / 0.25);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--color-brand-100);
+    color: var(--color-brand-900);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+}
