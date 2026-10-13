@@ -4,7 +4,9 @@ import { business } from '../../config/business'
 import { navLinks } from '../../config/navigation'
 import { services } from '../../data/services'
 import { mapsSearchUrl } from '../../utils/contact'
+import { whatsappUrl } from '../../utils/whatsapp'
 import { Logo } from '../ui/Logo'
+import { WhatsAppIcon } from '../ui/WhatsAppButton'
 
 const heading = 'text-sm font-bold tracking-tight text-ink'
 const link = 'text-[15px] text-muted transition-colors hover:text-brand-700'
@@ -65,6 +67,18 @@ export function Footer() {
               <a href={business.phoneUri} className={`${link} inline-flex items-center gap-2.5`}>
                 <Phone className="size-4 shrink-0 text-fire-600" aria-hidden="true" />
                 {business.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${link} inline-flex items-center gap-2.5`}
+              >
+                <WhatsAppIcon className="size-4 shrink-0 text-[#1f8a4c]" />
+                {business.whatsappDisplay}
+                <span className="sr-only"> (WhatsApp, opens in a new tab)</span>
               </a>
             </li>
             <li>
