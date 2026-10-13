@@ -22,6 +22,10 @@ export const business = {
   phoneE164: '+919815262757',
   phoneUri: 'tel:+919815262757',
 
+  /** Second contact number, shown alongside the first one everywhere, with equal weight. */
+  phone2Display: '96463-96707',
+  phone2Uri: 'tel:+919646396707',
+
   /**
    * WhatsApp number that receives every enquiry (country code + number, digits only).
    * All WhatsApp buttons and the enquiry form send to this number.
@@ -90,3 +94,9 @@ export const business = {
 } as const
 
 export const fullAddressQuery = `${business.name}, ${business.addressLine}`
+
+/** Both contact numbers, always shown together and styled the same. */
+export const phoneNumbers = [
+  { display: business.phoneDisplay, uri: business.phoneUri },
+  { display: business.phone2Display, uri: business.phone2Uri },
+]

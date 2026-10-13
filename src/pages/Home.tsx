@@ -23,6 +23,12 @@ const structuredData = {
   name: business.name,
   description,
   telephone: business.phoneE164,
+  contactPoint: [business.phoneE164, `+${business.whatsappNumber}`].map((telephone) => ({
+    '@type': 'ContactPoint',
+    telephone,
+    contactType: 'customer service',
+    areaServed: 'IN',
+  })),
   email: business.email,
   taxID: business.gstin,
   foundingDate: String(business.registeredSince),

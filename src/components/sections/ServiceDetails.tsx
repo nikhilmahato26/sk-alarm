@@ -3,7 +3,7 @@ import type { KeyboardEvent } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Check, Mail, Phone } from 'lucide-react'
 
-import { business } from '../../config/business'
+import { business, phoneNumbers } from '../../config/business'
 import { projectSteps, services } from '../../data/services'
 import { SELECT_SERVICE_EVENT, mailtoHref, scrollToId } from '../../utils/contact'
 import { serviceEnquiryMessage, whatsappUrl } from '../../utils/whatsapp'
@@ -174,10 +174,12 @@ export function ServiceDetails() {
                     </div>
 
                     <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
-                      <a href={business.phoneUri} className="inline-flex items-center gap-1.5 hover:text-brand-700">
-                        <Phone className="size-3.5" aria-hidden="true" />
-                        {business.phoneDisplay}
-                      </a>
+                      {phoneNumbers.map((p) => (
+                        <a key={p.uri} href={p.uri} className="inline-flex items-center gap-1.5 hover:text-brand-700">
+                          <Phone className="size-3.5" aria-hidden="true" />
+                          {p.display}
+                        </a>
+                      ))}
                       <a
                         href={mailtoHref(`Enquiry: ${s.name}`)}
                         className="inline-flex items-center gap-1.5 break-all hover:text-brand-700"

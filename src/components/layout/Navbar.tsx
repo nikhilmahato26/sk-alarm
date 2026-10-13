@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react'
 import { Menu, Phone, X } from 'lucide-react'
 
-import { business } from '../../config/business'
+import { business, phoneNumbers } from '../../config/business'
 import { navLinks } from '../../config/navigation'
 import { ButtonLink } from '../ui/Button'
 import { Logo } from '../ui/Logo'
@@ -69,13 +69,21 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a
-            href={business.phoneUri}
-            className="hidden items-center gap-2 text-sm font-semibold whitespace-nowrap text-ink transition-colors hover:text-brand-700 xl:inline-flex"
-          >
+          <p className="hidden items-center gap-2 text-sm font-semibold whitespace-nowrap text-ink xl:inline-flex">
             <Phone className="size-4 text-fire-600" aria-hidden="true" />
-            {business.phoneDisplay}
-          </a>
+            {phoneNumbers.map((p, i) => (
+              <span key={p.uri} className="inline-flex items-center gap-2">
+                {i > 0 && (
+                  <span aria-hidden="true" className="text-line">
+                    /
+                  </span>
+                )}
+                <a href={p.uri} className="transition-colors hover:text-brand-700">
+                  {p.display}
+                </a>
+              </span>
+            ))}
+          </p>
           <ButtonLink href="#enquiry" variant="primary" size="md">
             Request an Enquiry
           </ButtonLink>
@@ -123,10 +131,14 @@ export function Navbar() {
                 <ButtonLink href="#enquiry" onClick={() => setOpen(false)} variant="primary" size="lg">
                   Request an Enquiry
                 </ButtonLink>
-                <ButtonLink href={business.phoneUri} variant="outline" size="lg">
-                  <Phone className="size-4 text-fire-600" aria-hidden="true" />
-                  Call {business.phoneDisplay}
-                </ButtonLink>
+                <div className="grid grid-cols-2 gap-3">
+                  {phoneNumbers.map((p) => (
+                    <ButtonLink key={p.uri} href={p.uri} variant="outline" size="lg" className="px-3">
+                      <Phone className="size-4 text-fire-600" aria-hidden="true" />
+                      {p.display}
+                    </ButtonLink>
+                  ))}
+                </div>
               </div>
             </nav>
           </motion.div>

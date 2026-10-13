@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react'
 
 import heroImage from '../../assets/images/hero-hydrant-portrait.webp'
 import insetImage from '../../assets/images/alarm-call-point.webp'
-import { business } from '../../config/business'
+import { phoneNumbers } from '../../config/business'
 import { whatsappUrl } from '../../utils/whatsapp'
 import { ButtonLink } from '../ui/Button'
 import { WhatsAppIcon } from '../ui/WhatsAppButton'
@@ -94,15 +94,22 @@ export function Hero() {
               <WhatsAppIcon className="size-4.5" />
               Enquire Now
             </ButtonLink>
-            <ButtonLink
-              href={business.phoneUri}
-              variant="outline"
-              size="lg"
-              className="border-white/25 bg-white/5 text-white hover:border-white/60 hover:bg-white/10 hover:text-white"
-            >
-              <Phone className="size-4.5 text-[#ff8a7f]" aria-hidden="true" />
-              Call Us: {business.phoneDisplay}
-            </ButtonLink>
+            <div className="flex h-12 items-stretch overflow-hidden rounded-lg border border-white/25 bg-white/5 text-[15px] font-semibold text-white sm:h-13">
+              <span className="flex items-center pl-4">
+                <Phone className="size-4.5 text-[#ff8a7f]" aria-hidden="true" />
+              </span>
+              {phoneNumbers.map((p, i) => (
+                <a
+                  key={p.uri}
+                  href={p.uri}
+                  className={`flex flex-1 items-center justify-center px-4 whitespace-nowrap transition-colors hover:bg-white/10 sm:flex-none ${
+                    i > 0 ? 'border-l border-white/20' : ''
+                  }`}
+                >
+                  {p.display}
+                </a>
+              ))}
+            </div>
           </motion.div>
         </div>
 

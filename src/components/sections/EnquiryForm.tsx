@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { CircleAlert, CircleCheck, Loader, Mail, Phone, RotateCcw, Send } from 'lucide-react'
 
-import { business } from '../../config/business'
+import { business, phoneNumbers } from '../../config/business'
 import { mailtoHref } from '../../utils/contact'
 import { enquiryMessage, whatsappUrl } from '../../utils/whatsapp'
 import { Button, ButtonLink } from '../ui/Button'
@@ -151,18 +151,28 @@ export function EnquiryForm() {
           />
 
           <div className="mt-8 space-y-3">
-            <a
-              href={business.phoneUri}
-              className="flex items-center gap-4 rounded-2xl border border-brand-100 bg-white p-4 transition-colors hover:border-brand-500"
-            >
-              <span className="inline-flex size-11 items-center justify-center rounded-lg bg-fire-50 text-fire-600">
+            <div className="flex items-center gap-4 rounded-2xl border border-brand-100 bg-white p-4">
+              <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-lg bg-fire-50 text-fire-600">
                 <Phone className="size-5" aria-hidden="true" />
               </span>
               <span>
                 <span className="block text-sm text-muted">Call SK Fire Protection</span>
-                <span className="block font-display text-lg font-bold text-ink">{business.phoneDisplay}</span>
+                <span className="flex flex-wrap gap-x-3 font-display text-lg font-bold text-ink">
+                  {phoneNumbers.map((p, i) => (
+                    <span key={p.uri} className="inline-flex gap-3">
+                      {i > 0 && (
+                        <span aria-hidden="true" className="font-normal text-line">
+                          /
+                        </span>
+                      )}
+                      <a href={p.uri} className="hover:text-brand-700">
+                        {p.display}
+                      </a>
+                    </span>
+                  ))}
+                </span>
               </span>
-            </a>
+            </div>
             <a
               href={mailtoHref('Fire protection enquiry')}
               className="flex items-center gap-4 rounded-2xl border border-brand-100 bg-white p-4 transition-colors hover:border-brand-500"
@@ -225,7 +235,7 @@ export function EnquiryForm() {
                   </ButtonLink>
                   <ButtonLink href={business.phoneUri} variant="outline" size="lg">
                     <Phone className="size-4.5 text-fire-600" aria-hidden="true" />
-                    Call {business.phoneDisplay}
+                    Call SK Fire Protection
                   </ButtonLink>
                 </div>
 
