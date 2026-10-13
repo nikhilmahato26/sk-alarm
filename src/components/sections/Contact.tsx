@@ -71,15 +71,11 @@ export function Contact() {
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               {business.people.map((p, i) => (
                 <Reveal as="li" key={p.name} delay={i * 0.06} className="rounded-2xl border border-line p-5">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex size-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
-                      <UserRound className="size-5" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <p className="font-display font-bold text-ink">{p.name}</p>
-                      <p className="text-sm font-medium text-fire-600">{p.role}</p>
-                    </div>
-                  </div>
+                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                    <UserRound className="size-5" aria-hidden="true" />
+                  </span>
+                  <p className="mt-3 font-display font-bold text-ink">{p.name}</p>
+                  <p className="text-sm font-medium text-fire-600">{p.role}</p>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{p.focus}</p>
                   <a
                     href={`tel:${p.phoneE164}`}

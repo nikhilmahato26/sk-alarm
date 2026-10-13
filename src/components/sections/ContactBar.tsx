@@ -15,7 +15,7 @@ const items: Item[] = [
 export function ContactBar() {
   return (
     <section aria-label="Quick contact details" className="border-y border-line bg-brand-900 text-white">
-      <ul className="container-page grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+      <ul className="container-page grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-[1fr_1fr_1.1fr_1.5fr] lg:divide-x">
         {items.map(({ icon: Icon, label, value, href }) => {
           const content = (
             <>
@@ -24,7 +24,7 @@ export function ContactBar() {
               </span>
               <span className="min-w-0">
                 <span className="block text-xs font-medium tracking-wide text-white/70">{label}</span>
-                <span className="block truncate text-[15px] font-semibold">{value}</span>
+                <span className="block text-[15px] font-semibold break-all sm:break-normal">{value}</span>
               </span>
             </>
           )

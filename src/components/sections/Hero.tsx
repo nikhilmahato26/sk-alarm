@@ -38,7 +38,7 @@ export function Hero() {
           <motion.h1
             {...rise(0.08)}
             id="hero-title"
-            className="max-w-[22ch] text-[2.3rem] leading-[1.08] font-extrabold tracking-[-0.035em] sm:text-5xl lg:text-[2.9rem] xl:text-[3.3rem]"
+            className="max-w-[22ch] text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.035em] sm:text-5xl lg:text-[2.9rem] xl:text-[3.3rem]"
           >
             Complete fire protection solutions for your <span className="text-brand-600">safety</span>
           </motion.h1>
